@@ -1,0 +1,97 @@
+.mainAgentTable {
+  font-family: sans-serif;
+  font-size: 12px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  .smallWidth {
+    width: 10%;
+  }
+  .mediumWidth {
+    width: 15%;
+  }
+  .xLargeWidth {
+    width: 50%;
+  }
+  .largeWidth {
+    width: 20%;
+  }
+
+  .mainAgentHeader {
+    font-weight: bold;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 10px;
+    border-bottom: 2px solid #d3d3d3;
+    background-color: #fafafa;
+    color: #000000;
+    div {
+      &:not(:first-child):before {
+        border-right: 1px solid #d3d3d3;
+        height: 25px;
+        display: inline-block;
+        content: "";
+        position: relative;
+        right: 10px;
+        vertical-align: middle;
+      }
+
+      // &:after{
+      //   margin: 0 0 0 5px;
+      //   content: "|";
+      // }
+    }
+  }
+
+  .agentItems {
+    font-weight: bold;
+    font-size: 13px;
+    color: #6a6a6a;
+    .closestMission {
+      color: #3bb53b;
+    }
+    .farthestMission {
+      color: #ff1c1c;
+    }
+    .agentItem {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 10px;
+      border-bottom: 1px solid #d3d3d3;
+    }
+  }
+
+  .mainAgentFooter {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-top: 1px solid #d3d3d3;
+    .footerData {
+      color: #6a6a6a;
+      font-weight: bold;
+    }
+  }
+}
+
+.btnCalc {
+  width: 180px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(#000000, #fafafa);
+  color: #f3f3f3;
+  margin-top: 20px;
+}
+.btnPointer {
+  cursor: pointer;
+}
+.btnProgress {
+  cursor: progress;
+}
+.btnNotAllowed {
+  cursor: not-allowed;
+}

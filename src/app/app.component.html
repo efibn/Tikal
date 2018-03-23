@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="mainAgentTable">
+
+	<div class="mainAgentHeader">
+		<div class="smallWidth">Agent ID</div>
+		<div class="mediumWidth">Country</div>
+		<div class="xLargeWidth">Address</div>
+		<div class="largeWidth">Date</div>
+	</div>
+
+
+
+	<div class="agentItems" 
+			*ngFor="let agent of inputAgents; trackBy: trackByFn; let i = index"
+			>
+		<div class="agentItem"
+			[ngClass]="{'closestMission':agent.closestMission==true, 'farthestMission':agent.farthestMission==true}">
+			<div class="smallWidth">{{agent.agent}}</div>
+			<div class="mediumWidth">{{agent.country}}</div>
+			<div class="xLargeWidth">{{agent.address}}</div>
+			<div class="largeWidth">{{agent.date}}</div>
+		</div>
+	</div>
+
+	<div class="mainAgentFooter">
+		<div class="footerData">{{inputAgents.length}} missions</div>
+	</div>
+</div>
+
+<div>
+	<input class="btnCalc" 
+				 [ngClass]="{'btnPointer': btnCursorStatus == 'pointer', 'btnProgress': btnCursorStatus == 'progress', 'btnNotAllowed': btnCursorStatus == 'notAllowed'}"
+				 [disabled]="isDisabledButton" 
+				 (click)="calculateDistance()" 
+				 type="button" 
+				 value="Calculate Distance">
+</div>
