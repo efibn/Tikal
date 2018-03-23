@@ -2,4 +2,4 @@
 
 #### Demo:
 
-Please Visit [Demo Page] (http://efibn.github.io/Tikal/index.html).
+Please Visit [Demo Page] (http://efibn.github.io/Tikal/src/index.html).
